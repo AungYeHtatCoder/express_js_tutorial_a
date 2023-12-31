@@ -49,6 +49,16 @@ const usersList = [
 app.get('/', (req, res) => {
   res.send(usersList);
 });
+// route parameters
+// app.get('/', (req, res) => {
+//   res.send(usersList[0]);
+// });
+
+app.get('/users/:user', (req, res) => {
+  const user = usersList.find((a) => a.username === req.params.user);
+  res.send(user ? 200 : 404);
+});
+
 // app.get(
 //   '/',
 //   (request, response, next) => {
