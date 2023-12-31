@@ -1,0 +1,6 @@
+npm i express 
+npm i -D nodemon (for npm start)
+npm install ejs (for view data)
+
+git check-ignore -v express_a/node_modules
+git check-ignore -v file1.txt path/to/file2.js express_a/node_modules
